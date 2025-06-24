@@ -7,8 +7,8 @@
   <title>Divya's Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -33,23 +33,26 @@
         </ul>
       </div>
       <div class="nav-right">
-          <a href="#" class="resume-button" onclick="openResumeModal()">Resume</a>
+        <a href="#" class="resume-button" onclick="openResumeModal()">Resume</a>
       </div>
     </nav>
 
     <div class="content">
       <div class="photo-wrapper" id="photoWrapper">
         <div class="photo-glow" id="photoGlow"></div>
-        <img src="images/WhatsApp Image 2025-06-23 at 23.59.29_ba9ec82c.jpg" alt="Divya's Photo" class="profile-photo" />
+        <img src="images/WhatsApp Image 2025-06-23 at 23.59.29_ba9ec82c.jpg" alt="Divya's Photo"
+          class="profile-photo" />
       </div>
       <h1>Hello, I am <span>Divya</span></h1>
     </div>
   </div>
-   
+
   <section class="about-section" id="about">
     <h2>About <span>Me</span></h2>
     <p class="about-text">
-      I'm a passionate second-year B.Tech student at GL Bajaj Institute of Technology and Management. I love building innovative tech projects, diving deep into AI/ML, and solving real-world problems. I enjoy exploring open-source, working with modern web technologies, and constantly pushing my creative limits.
+      I'm a passionate second-year B.Tech student at GL Bajaj Institute of Technology and Management. I love building
+      innovative tech projects, diving deep into AI/ML, and solving real-world problems. I enjoy exploring open-source,
+      working with modern web technologies, and constantly pushing my creative limits.
     </p>
   </section>
 
@@ -57,7 +60,8 @@
     <h2>My <span>Projects</span></h2>
     <div class="projects-ladder">
       <div class="project-card-alt project-left">
-        <h3><a href="https://github.com/div9ya/influenzio2/tree/master">Influenzio: Brand Influencer Collaboration</a></h3>
+        <h3><a href="https://github.com/div9ya/influenzio2/tree/master">Influenzio: Brand Influencer Collaboration</a>
+        </h3>
         <p>A platform where brands and influencers find their perfect match and collaborate with each other.</p>
       </div>
       <div class="project-card-alt project-right">
@@ -65,7 +69,8 @@
         <p>Generates question papers based on Bloom’s taxonomy, syllabus, and course outcomes using Flask + MongoDB.</p>
       </div>
       <div class="project-card-alt project-left">
-        <h3><a href="https://github.com/div9ya/caresathi/tree/master">CareSathi: AI driven Hospital Management System</a></h3>
+        <h3><a href="https://github.com/div9ya/caresathi/tree/master">CareSathi: AI driven Hospital Management
+            System</a></h3>
         <p>Smart hospital management system using QR authentication, built with Flask backend and MongoDB storage.</p>
       </div>
     </div>
@@ -95,7 +100,8 @@
         <p>Java</p>
       </div>
       <div class="skill-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/4185/4185664.png" alt="Machine Learning" width="60" height="60">
+        <img src="https://cdn-icons-png.flaticon.com/512/4185/4185664.png" alt="Machine Learning" width="60"
+          height="60">
         <p>Machine Learning</p>
       </div>
     </div>
@@ -118,19 +124,35 @@
     </div>
   </section>
   <div id="resumeModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeResumeModal()">&times;</span>
-    <iframe src="./Divya_Verma.pdf" width="100%" height="100%"></iframe>
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeResumeModal()">&times;</span>
+      <iframe src="./Divya_Verma.pdf" width="100%" height="100%"></iframe>
+    </div>
   </div>
-</div>
+  <footer class="footer">
+    <div class="social-icons">
+      <a href="https://github.com/div9ya" target="_blank" aria-label="GitHub">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
+      </a>
+      <a href="https://www.linkedin.com/in/divya-verma-43a8b4291/" target="_blank" aria-label="LinkedIn">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+      </a>
+
+      <a href="https://leetcode.com/your-username/" target="_blank" aria-label="LeetCode">
+        <img src="https://cdn.iconscout.com/icon/free/png-256/leetcode-3521542-2944960.png" alt="LeetCode">
+      </a>
+    </div>
+    <p class="footer-text">© 2025 Divya Verma. All rights reserved.</p>
+  </footer>
+
 
   <script>
-  function openResumeModal() {
-    document.getElementById('resumeModal').style.display = 'block';
-  }
-  function closeResumeModal() {
-    document.getElementById('resumeModal').style.display = 'none';
-  }
+    function openResumeModal() {
+      document.getElementById('resumeModal').style.display = 'block';
+    }
+    function closeResumeModal() {
+      document.getElementById('resumeModal').style.display = 'none';
+    }
 
     const wrapper = document.getElementById("photoWrapper");
     const glow = document.getElementById("photoGlow");
@@ -145,7 +167,7 @@
       const rotateX = (y - centerY) / 20;
       const rotateY = (x - centerX) / 20;
 
-      wrapper.style.transform = `rotateX(${ -rotateX }deg) rotateY(${ rotateY }deg)`;
+      wrapper.style.transform = `rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
 
       const glowX = (x / rect.width) * 100;
       const glowY = (y / rect.height) * 100;
