@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Divya's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="global-overlay"></div>
+  <div class="animated-bg">
+    <div class="bubble"></div>
+    <div class="bubble delay1"></div>
+    <div class="bubble delay2"></div>
+    <div class="bubble delay3"></div>
+  </div>
+
+  <div class="hero" id="hero">
+    <nav>
+      <div class="nav-left"></div>
+      <div class="nav-center">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li> <a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skill">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+          <a href="#" class="resume-button" onclick="openResumeModal()">Resume</a>
+      </div>
+    </nav>
+
+    <div class="content">
+      <div class="photo-wrapper" id="photoWrapper">
+        <div class="photo-glow" id="photoGlow"></div>
+        <img src="images/WhatsApp Image 2025-06-23 at 23.59.29_ba9ec82c.jpg" alt="Divya's Photo" class="profile-photo" />
+      </div>
+      <h1>Hello, I am <span>Divya</span></h1>
+    </div>
+  </div>
+   
+  <section class="about-section" id="about">
+    <h2>About <span>Me</span></h2>
+    <p class="about-text">
+      I'm a passionate second-year B.Tech student at GL Bajaj Institute of Technology and Management. I love building innovative tech projects, diving deep into AI/ML, and solving real-world problems. I enjoy exploring open-source, working with modern web technologies, and constantly pushing my creative limits.
+    </p>
+  </section>
+
+  <section class="projects-section" id="projects">
+    <h2>My <span>Projects</span></h2>
+    <div class="projects-ladder">
+      <div class="project-card-alt project-left">
+        <h3><a href="https://github.com/div9ya/influenzio2/tree/master">Influenzio: Brand Influencer Collaboration</a></h3>
+        <p>A platform where brands and influencers find their perfect match and collaborate with each other.</p>
+      </div>
+      <div class="project-card-alt project-right">
+        <h3><a href="https://github.com/div9ya/PathShaala-AI">PathShaala AI: Automatic Question Paper Generator</a></h3>
+        <p>Generates question papers based on Bloom’s taxonomy, syllabus, and course outcomes using Flask + MongoDB.</p>
+      </div>
+      <div class="project-card-alt project-left">
+        <h3><a href="https://github.com/div9ya/caresathi/tree/master">CareSathi: AI driven Hospital Management System</a></h3>
+        <p>Smart hospital management system using QR authentication, built with Flask backend and MongoDB storage.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills-section" id="skill">
+    <h2>My <span>Skills</span></h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML">
+        <p>HTML</p>
+      </div>
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS">
+        <p>CSS</p>
+      </div>
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript">
+        <p>JavaScript</p>
+      </div>
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python">
+        <p>Python</p>
+      </div>
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java">
+        <p>Java</p>
+      </div>
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4185/4185664.png" alt="Machine Learning" width="60" height="60">
+        <p>Machine Learning</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="contact-right">
+      <h2>Contact<br><span>Me</span></h2>
+    </div>
+    <div class="contact-divider"></div>
+    <div class="contact-left">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="e97737e1-2dff-4b85-ada1-9527c7470292">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Write your email" required />
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+  <div id="resumeModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeResumeModal()">&times;</span>
+    <iframe src="./Divya_Verma.pdf" width="100%" height="100%"></iframe>
+  </div>
+</div>
+
+  <script>
+  function openResumeModal() {
+    document.getElementById('resumeModal').style.display = 'block';
+  }
+  function closeResumeModal() {
+    document.getElementById('resumeModal').style.display = 'none';
+  }
+
+    const wrapper = document.getElementById("photoWrapper");
+    const glow = document.getElementById("photoGlow");
+
+    wrapper.addEventListener("mousemove", (e) => {
+      const rect = wrapper.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const rotateX = (y - centerY) / 20;
+      const rotateY = (x - centerX) / 20;
+
+      wrapper.style.transform = `rotateX(${ -rotateX }deg) rotateY(${ rotateY }deg)`;
+
+      const glowX = (x / rect.width) * 100;
+      const glowY = (y / rect.height) * 100;
+      glow.style.background = `radial-gradient(circle at ${glowX}% ${glowY}%, #00ffffaa, transparent 70%)`;
+    });
+
+    wrapper.addEventListener("mouseleave", () => {
+      wrapper.style.transform = `rotateX(0deg) rotateY(0deg)`;
+      glow.style.background = `radial-gradient(circle at 30% 30%, #00ffffaa, transparent 70%)`;
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll(".project-card-alt").forEach(card => observer.observe(card));
+    document.querySelectorAll(".skill-card").forEach(card => observer.observe(card));
+  </script>
+</body>
+
+</html>
